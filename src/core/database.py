@@ -8,7 +8,7 @@ from core.logger import log
 class Database:
     def __init__(self):
         self.tasks = []
-        self._last_used_id = 0
+        self._last_used_id = 1
         self._ids_set = set()
         self._lock = threading.Lock()
 
