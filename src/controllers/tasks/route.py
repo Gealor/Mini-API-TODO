@@ -32,7 +32,7 @@ def get_task_by_id(id: int, service: task_service_depends) -> TaskReadSchema:
 
     return result
 
-@router.post("/")
+@router.post("/", status_code=status.HTTP_201_CREATED)
 def create_task(data: TaskCreateSchema, service: task_service_depends) -> TaskReadSchema:
     return service.create_task(data)
 
