@@ -1,12 +1,15 @@
-from typing import Annotated, Any
+from typing import Annotated
+from typing import Any
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter
+from fastapi import Depends
 from fastapi import HTTPException
 from fastapi import status
 
 from dependencies import get_task_service
 from schemas.exceptions import TaskNotFoundException
-from schemas.tasks import ListTaskReadSchema, TaskCreateSchema
+from schemas.tasks import ListTaskReadSchema
+from schemas.tasks import TaskCreateSchema
 from schemas.tasks import TaskReadSchema
 from services.tasks_service import TaskService
 
